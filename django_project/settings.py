@@ -21,7 +21,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-30=dm$k+_m=tu30+pwxaxksl2@7pdk9cgj*4pf^73$z9250*ls'
+SECRET_KEY = ''
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -100,7 +100,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'staydine',
         'USER': 'root',
-        'PASSWORD': 'YourPassword',
+        'PASSWORD': '', # make sure you write your password
         'HOST': 'localhost',  # or the IP address of your database server
         'PORT': '3306',       # default MySQL port
     }
@@ -169,9 +169,9 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.example.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'shaikmasthanjilani@gmail.com'
-EMAIL_HOST_PASSWORD = '123456'
-DEFAULT_FROM_EMAIL = 'shaikmasthanjilani@gmail.com'
+EMAIL_HOST_USER = '' # your email
+EMAIL_HOST_PASSWORD = '' # make one
+DEFAULT_FROM_EMAIL = '' # your email again
 
 
 # SESSION_ENGINE = 'django.contrib.sessions.backends.db'
