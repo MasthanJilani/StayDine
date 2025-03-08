@@ -1,0 +1,52 @@
+{% extends "staydine/base.html" %}
+
+{% block content %}
+<style>
+    .custom-card {
+        border-radius: 15px;
+        background-color: #f0f8ff;
+        box-shadow: 1 10px 20px rgba(0, 0, 0, 1);
+        transition: transform 0.2s;
+    }
+
+    .custom-card:hover {
+        transform: translateY(-20px);
+    }
+
+    .welcome-card {
+        border-radius: 15px;
+        background-color: rgba(0, 0, 255, 0.7);
+        padding: 20px;
+        box-shadow: 1 10px 20px rgba(0, 0, 0, 0.3);
+    }
+</style>
+<div class="container my-4">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow p-4 text-center welcome-card">
+                <h2>Welcome to StayDine,</h2>
+                <h3>Where Comfort meets Culinary Delight!</h3>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container my-3 ">
+    <h1 class="my-2 text-center">Experience the Best of StayDine ;)</h1>
+    <br><br>
+    <div class="row">
+        {% for highlight in highlights %}
+        <div class="col-md-4">
+            <div class="card mb-4 shadow-sm rounded custom-card text-center">
+                <img src="{{ highlight.image_url }}" class="card-img-top" alt="Thumbnail" style="height: 225px; object-fit: cover;">
+                <div class="card-body">
+                    <h4>{{ highlight.title }}</h4>
+                    <p class="card-text">{{ highlight.description }}</p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock content %}

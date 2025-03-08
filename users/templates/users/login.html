@@ -1,0 +1,38 @@
+{% extends "staydine/base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-image: url('https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        padding: 50px;
+    }
+</style>
+<div class="container mt-5">
+    <h1 class="text-center text-light">Welcome Back!</h1>
+    <div class="translucent-bg text-dark p-4 rounded shadow">
+        <form method="POST">
+            {% csrf_token %}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">Log In</legend>
+                {{ form|crispy }}
+            </fieldset>
+            <div class="form-group">
+                <button class="btn btn-outline-info" type="submit">Login</button>
+            </div>
+        </form>
+        <div class="border-top pt-3">
+            <small class="text-muted">
+                Don't Have an Account? <a class="ml-2" href="{% url 'register' %}">Sign Up Now</a>
+            </small>
+        </div>
+        <div class="pt-3">
+            <small><a href="{% url 'password_reset' %}">Forgot Password?</a></small>
+        </div>
+    </div>
+</div>
+{% endblock content %}

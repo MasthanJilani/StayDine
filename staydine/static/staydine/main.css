@@ -1,0 +1,69 @@
+body {
+    background: #fafafa;
+    color: #333333;
+    background-image: url('https://images.unsplash.com/photo-1445019980597-93fa8acb246c?q=80&w=2074&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin-top: 5rem;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    color: #000000;
+    font-family: "Merienda", sans-serif;
+    font-weight: 400;
+}
+
+ul {
+    margin: 0;
+}
+
+.bg-steel {
+    background-color: #0000ff;
+}
+
+.site-header .navbar-nav .nav-link {
+    color: #cbd5db;
+}
+
+.site-header .navbar-nav .nav-link:hover {
+    color: #ffffff;
+}
+
+.site-header .navbar-nav .nav-link.active {
+    font-family: cursive, sans-serif;
+    font-weight: 500;
+}
+
+.navbar-brand-custom {
+    font-family: 'Protest Guerrilla', sans-serif;
+}
+
+.chk-font {
+    font-family:'Times New Roman', sans-serif;
+}
+
+.nav-item:hover {
+    transform: translateY(-5px);
+    transition: all 0.3s ease;
+}
+
+
+.account-img {
+    height: 125px;
+    width: 125px;
+    margin-right: 20px;
+    margin-bottom: 16px;
+}
+
+.account-heading {
+    font-size: 2.5rem;
+}
+
+.translucent-bg {
+    background-color: rgba(7, 243, 239, 0.9);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(71, 64, 216, 0.2);
+}
